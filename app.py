@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/", methods=["GET"])
 def index():
     city = request.args.get("city", "chennai")
-    api_key = "YOUR_API_KEY"  # 🔑 replace with your OpenWeather API key
+    api_key = "e084469d75cffef8d3cbccf824240565"  # 🔑 replace with your OpenWeather API key
 
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
     response = requests.get(url).json()
